@@ -16,8 +16,8 @@ function Main() {
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Classrooms/:className" element={<Classroom />}>
-            <Route path="Exercises" element={<Exercise />} />
+          <Route path="/Classrooms" element={<Classroom />}>
+            <Route path=":className" element={<Exercise />} />
           </Route>
           <Route path="/About" element={<About />} />
         </Routes>
