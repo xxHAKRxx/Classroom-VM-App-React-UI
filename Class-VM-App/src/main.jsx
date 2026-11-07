@@ -17,7 +17,9 @@ function Main() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Classrooms" element={<Classroom />}>
-            <Route path=":className" element={<Exercise />} />
+            <Route path=":className" element={<Exercise />}>
+              <Route path=":exerciseName" element={<Exercise />} />
+            </Route>
           </Route>
           <Route path="/About" element={<About />} />
         </Routes>

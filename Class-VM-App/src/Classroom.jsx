@@ -30,6 +30,7 @@ export function Classroom() {
 }
 
 export function Exercise() {
+    const { exerciseName } = useParams();
     return (
         <div className="exercises">
             <h1>Exercises</h1>
@@ -38,20 +39,30 @@ export function Exercise() {
                 <p>
                     Objective: Your company has recently suffered a data breach due to lax file permissions, allowing a rouge employee to hack into the company's network and
                     leak the data to the public. Your boss has ordered you to change the file permissions on all computers so that this kind of breach will never happen
-                    again. Every single computer in your company uses Ubuntu. Follow the instructions on each section in the lab and answer the flags.
+                    again. You have logged into your company's Linux server, which controls all the computers in the network. Follow the instructions on each section in the lab 
+                    and answer the flags.
                 </p>
                 <p>Due: November 4th, 2026, 12:00 AM</p>
                 <p>Score: */30</p>
+                <Link to="/Classrooms/CIS228/Exercise1">View Exercise</Link>
             </div>
             <div className="exercise2">
                 <h2>Exercise 2: Track suspicious network traffic with Wireshark</h2>
                 <p>
-                    Objective: Upper management has become concerned about a malicious hacker trying to get into their network. You decide to use Wireshark to monitor the
-                    company network and check for any suspicious traffic. Follow the instructions on each section in the lab and answer the flags.
+                    Objective: Upper management has become concerned about a malicious hacker trying to get into the company network. You decide to use Wireshark to monitor the 
+                    network and check for any suspicious traffic. Follow the instructions on each section in the lab and answer the flags.
                 </p>
                 <p>Due: November 10th, 2026, 12:00 AM</p>
                 <p>Score: */30</p>
+                <Link to="/Classrooms/CIS228/Exercise2">View Exercise</Link>
             </div>
+        </div>
+    );
+}
+
+export function Lab() {
+    return (
+        <div className="labs">
         </div>
     );
 }
